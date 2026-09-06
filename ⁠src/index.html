@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حقوق 570</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- شريط التنقل العلوي -->
+        <header class="navbar">
+            <button id="menu-btn" class="icon-btn">☰</button>
+            <div class="store-info">
+                <h1>حقوق 570</h1>
+                <span>خبز • كيك • حلويات</span>
+            </div>
+        </header>
+
+        <!-- معلومات الفرع الحالي -->
+        <div class="branch-bar">
+            <span id="current-branch-text">📍 فرع عشيرة</span>
+            <div class="branch-actions">
+                <button class="action-chip" onclick="openMap()">الموقع 🗺️</button>
+                <button class="action-chip" onclick="changeBranch()">تغيير الفرع</button>
+            </div>
+        </div>
+
+        <!-- البنر الرئيسي -->
+        <section class="banner">
+            <h2>أهلاً بكم في لذة الخلية</h2>
+            <p>اطلب ما يحلو لك واستلم من الفرع</p>
+        </section>
+
+        <!-- الأقسام -->
+        <div id="categories-container" class="categories-scroll">
+            <!-- يتم تعبئتها ديناميكياً -->
+        </div>
+
+        <!-- قائمة المنتجات -->
+        <main class="products-grid" id="products-container">
+            <!-- يتم تعبئتها ديناميكياً -->
+        </main>
+
+        <!-- زر السلة العائم -->
+        <button class="cart-fab" onclick="openCart()">
+            السلة 🛒
+        </button>
+
+        <!-- الفوتر السفلي والشعار القابل للنقر 5 مرات -->
+        <footer class="store-footer">
+            <p id="secret-admin-trigger" class="footer-brand">حقوق 0570</p>
+            <span class="footer-sub">جميع الحقوق محفوظة</span>
+        </footer>
+    </div>
+
+    <!-- لوحة التحكم الجانبية (Sidebar) -->
+    <div id="sidebar" class="sidebar hidden">
+        <div class="sidebar-header">
+            <span id="user-role-badge">مدير</span>
+            <button onclick="toggleSidebar()">✕</button>
+        </div>
+        <ul class="sidebar-menu" id="sidebar-menu-items">
+            <li onclick="openSection('store-customization')">تخصيص المتجر 📦</li>
+            <li onclick="openSection('branches-management')">الفروع 🏢</li>
+            <li onclick="openSection('orders-management')">استلام الطلبات ✅</li>
+            <li onclick="openSection('admin-settings')">الإدارة 🔑</li>
+            <li onclick="openSection('statistics')">الإحصائيات 📊</li>
+            <li onclick="logout()">تسجيل الخروج 🚪</li>
+        </ul>
+    </div>
+
+    <!-- النوافذ المنبثقة (Modals) -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div id="modal-content" class="modal-box">
+            <!-- محتوى المودال المتغير -->
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
