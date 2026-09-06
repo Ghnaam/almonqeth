@@ -1,0 +1,25 @@
+/* الأنماط السابقة تبقى كما هي، ويضاف إليها: */
+
+.store-footer {
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 30px;
+    color: #8c7a6b;
+    border-top: 1px solid #e2d9ce;
+}
+
+.footer-brand {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.footer-sub {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
